@@ -1,15 +1,18 @@
 import React from 'react';
 import Loader from 'react-loader-spinner';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { login } from '../../actions/loginActions';
-import './Login.scss';
 
-class Login extends React.Component {
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import { signup } from '../../actions/signupActions';
+import '../Login/Login.scss';
+
+class Signup extends React.Component {
   state = {
     credentials: {
       username: '',
-      password: ''
+      password1: '',
+      password2: ''
     }
   };
 
@@ -22,17 +25,21 @@ class Login extends React.Component {
     });
   };
 
-  login = e => {
+  signup = e => {
     e.preventDefault();
-    this.props.login(this.state.credentials);
-    setTimeout(() => this.props.history.push('/'), 2000);
+    this.props
+      .signup(this.state.credentials)
+      .then(this.props.history.push('/login'));
+    // setTimeout(() => this.props.history.push('/login'), 2000);
   };
 
   render() {
     return (
       <div className='login-form'>
-        {this.props.signupMsg && <h2>{this.props.signupMsg}</h2>}
-        <form className='form' onSubmit={this.login}>
+        <form className='form' onSubmit={this.signup}>
+          <h2>
+            Already have an account? Click to {<Link to='/login'>Log in</Link>}
+          </h2>
           <label htmlFor='username'>Username</label>
           <input
             type='text'
@@ -44,38 +51,42 @@ class Login extends React.Component {
           <label htmlFor='password'>Password</label>
           <input
             type='password'
-            name='password'
+            name='password1'
             placeholder='Password'
-            value={this.state.credentials.password}
+            value={this.state.credentials.password1}
+            onChange={this.handleChange}
+          />
+          <label htmlFor='password'>Confrim Password</label>
+          <input
+            type='password'
+            name='password2'
+            placeholder='password'
+            value={this.state.credentials.password2}
             onChange={this.handleChange}
           />
           <div className='flex-spacer' />
           {this.props.error && <p className='error'>{this.props.error}</p>}
 
           <button className='button'>
-            {this.props.loggingIn ? (
+            {this.props.signingUp ? (
               <Loader type='ThreeDots' color='white' height='12' width='26' />
             ) : (
-              <span>Login</span>
+              <span>Sign Up</span>
             )}
           </button>
-          <h2>
-            Don't have an account?{' '}
-            <Link className='link' to='/signup'>
-              Register
-            </Link>
-          </h2>
         </form>
       </div>
     );
   }
 }
+
 const mapStateToProps = state => ({
-  error: state.loginReducer.error,
-  loggingIn: state.loginReducer.loggingIn,
-  signupMsg: state.loginReducer.signupMsg
+  error: state.signupReducer.error,
+  signingUp: state.signupReducer.signingUp,
+  signedUp: state.signupReducer.signedUp
 });
+
 export default connect(
   mapStateToProps,
-  { login }
-)(Login);
+  { signup }
+)(Signup);
