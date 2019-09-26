@@ -64,6 +64,12 @@
     .player-control {
         margin-top: 10%;
 
+        button {
+            font-size: 25px;
+            margin: 5%;
+            border-radius: 15px;
+        }
+
         .top {
             
         }
@@ -84,6 +90,13 @@
 
         .bottom {
         
+        }
+
+        .btn {
+
+            &hover {
+                color: green;
+            }
         }
 
     } // End of player-control
