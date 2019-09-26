@@ -14,6 +14,7 @@ class Map extends React.Component {
 
   changeDir = e => {
     e.preventDefault();
+    console.log(`you chose to go ${e.target.value}`)
     playerMove(e.target.value);
   }
 
