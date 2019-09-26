@@ -1,8 +1,22 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { playerMove } from '../../actions/player';
 
 import './Map.scss';
 
 class Map extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+
+    }
+  }
+
+  changeDir = e => {
+    e.preventDefault();
+    playerMove(e.target.value);
+  }
+
   render() {
     return (
       <div className="main-map">
@@ -45,23 +59,23 @@ class Map extends React.Component {
 
               <div className="player-control">
 
-                <div className="top">
+                <div className="top btn" value="n">
                   <h1>UP</h1>
                 </div>
 
                 <div className="mid-btns">
                 
-                  <div className="moveR">
+                  <div className="moveR btn" value="e">
                     <h1>RIGHT</h1>
                   </div>
 
-                  <div className="moveL">
+                  <div className="moveL btn" value="w">
                     <h1>LEFT</h1>
                   </div>
 
                 </div>
 
-                <div className="bottom">
+                <div className="bottom btn" value="s">
                   <h1>DOWN</h1>
                 </div>
               
@@ -77,4 +91,4 @@ class Map extends React.Component {
   }
 }
 
-export default Map;
+export default connect(null, { playerMove })(Map);
