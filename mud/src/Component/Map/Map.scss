@@ -62,4 +62,31 @@
         
     } // end of map-bottom
 
+    .player-control {
+        margin-top: 10%;
+
+        .top {
+            
+        }
+
+        .mid-btns {
+            display: flex;
+
+            .moveR {
+                width: 49.5%;
+                
+            }
+
+            .moveL {
+                width: 49.5%;
+                
+            }
+        }
+
+        .bottom {
+        
+        }
+
+    } // End of player-control
+
 } // end of main-map

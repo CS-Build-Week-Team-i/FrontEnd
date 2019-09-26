@@ -17,7 +17,7 @@ class Map extends React.Component {
           <div className="map-left">
             
             {/* Game view will also go inside here */}
-            
+
           </div>
 
           <div className="map-right">
@@ -39,6 +39,32 @@ class Map extends React.Component {
                 <h3>Name: User</h3>
                 <h3>Items: Stick, Paper, String, Kleenex</h3>
                 <h3>Health: 100</h3>
+              </div>
+
+              <hr className="line"/>
+
+              <div className="player-control">
+
+                <div className="top">
+                  <h1>UP</h1>
+                </div>
+
+                <div className="mid-btns">
+                
+                  <div className="moveR">
+                    <h1>RIGHT</h1>
+                  </div>
+
+                  <div className="moveL">
+                    <h1>LEFT</h1>
+                  </div>
+
+                </div>
+
+                <div className="bottom">
+                  <h1>DOWN</h1>
+                </div>
+              
               </div>
 
             </div>
