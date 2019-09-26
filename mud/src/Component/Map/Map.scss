@@ -1,0 +1,60 @@
+.main-map {
+
+    .map-header {
+
+    }
+
+    .map-bottom {
+        display: flex;
+        // border: 1px solid red;
+
+        .map-left {
+            margin: 1%;
+            width: 75%;
+            background-color: black;
+            height: 800px;
+            border: 1px solid red;
+        } // end of map-left
+
+        .map-right {
+            margin: 1%;
+            width: 25%;
+            height: 850px;
+            border: 1px solid red;
+
+            .right-header {
+                color: white;
+            }
+
+            .line {
+                width: 75%;
+            }
+
+            .bottom-info {
+
+
+                .room-info {
+
+                    h3 {
+                        padding: 1%;
+                        font-size: 30px;
+                    }
+
+                    p {
+                        padding: 2%;
+                        font-size: 23px;
+                    }
+
+                }
+
+                .player-info {
+                    text-align: left;
+                    padding: 2%;
+
+                }
+            }
+        } // end of map-right
+
+    } // end of map-bottom
+
+} // end of main-map
