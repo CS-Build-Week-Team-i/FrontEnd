@@ -60,24 +60,24 @@ class Map extends React.Component {
 
               <div className="player-control">
 
-                <div onClick={this.changeDir} className="top btn">
-                  <button value="n">UP</button>
+                <div className="top btn">
+                  <button onClick={this.changeDir} value="n">UP</button>
                 </div>
 
                 <div className="mid-btns">
                 
-                  <div onClick={this.changeDir} className="moveR btn">
-                    <button value="e">RIGHT</button>
+                  <div className="moveR btn">
+                    <button onClick={this.changeDir} value="e">RIGHT</button>
                   </div>
 
-                  <div onClick={this.changeDir} className="moveL btn">
-                    <button value="w">LEFT</button>
+                  <div className="moveL btn">
+                    <button onClick={this.changeDir} value="w">LEFT</button>
                   </div>
 
                 </div>
 
-                <div onClick={this.changeDir} className="bottom btn">
-                  <button value="s">DOWN</button>
+                <div className="bottom btn">
+                  <button onClick={this.changeDir} value="s">DOWN</button>
                 </div>
               
               </div>
