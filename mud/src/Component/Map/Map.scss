@@ -6,7 +6,6 @@
 
     .map-bottom {
         display: flex;
-        // border: 1px solid red;
 
         .map-left {
             margin: 1%;
@@ -19,8 +18,8 @@
         .map-right {
             margin: 1%;
             width: 25%;
-            height: 850px;
             border: 1px solid red;
+            background-color: #282c34;
 
             .right-header {
                 color: white;
@@ -45,16 +44,22 @@
                         font-size: 23px;
                     }
 
-                }
+                } // end of room-info
 
                 .player-info {
                     text-align: left;
                     padding: 2%;
 
-                }
-            }
+                } // end of player info
+
+                
+            } // end of bottom-info
+
         } // end of map-right
 
+        // border: 1px solid yellow;
+        // background-color: purple;
+        
     } // end of map-bottom
 
 } // end of main-map

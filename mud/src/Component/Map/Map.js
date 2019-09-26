@@ -7,16 +7,17 @@ class Map extends React.Component {
     return (
       <div className="main-map">
         <div className="map-header">
-        {/* Top portion in this div */}
+        
           <h1>This is the map</h1>
         </div>
-        {/* split these bottom divs ~75%/25% for each side respectively */}
+        
 
         <div className="map-bottom">
 
           <div className="map-left">
-            {/* Left side width ~ 75% */}
+            
             {/* Game view will also go inside here */}
+            
           </div>
 
           <div className="map-right">
