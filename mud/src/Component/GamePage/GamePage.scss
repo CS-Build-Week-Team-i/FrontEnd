@@ -1,0 +1,85 @@
+
+.main-map {
+    .map-header {
+    }
+
+    .map-bottom {
+        display: flex;
+
+        .map-left {
+            margin: 1%;
+            width: 75%;
+            background-color: black;
+            height: 800px;
+            border: 1px solid red;
+        } // end of map-left
+
+        .map-right {
+            margin: 1%;
+            width: 25%;
+            background-color: darkred;
+
+            .right-header {
+                color: white;
+            }
+
+            .line {
+                width: 75%;
+            }
+
+            .bottom-info {
+                .room-info {
+                    h3 {
+                        padding: 1%;
+                        font-size: 30px;
+                    }
+                    
+                    p {
+                        padding: 2%;
+                        font-size: 23px;
+                    }
+                } // end of room-info
+
+                .player-info {
+                    text-align: left;
+                    padding: 2%;
+                } // end of player info
+            } // end of bottom-info
+        } // end of map-right
+        // border: 1px solid yellow;
+        // background-color: purple;
+    } // end of map-bottom
+
+    .player-control {
+        margin-top: 8%;
+
+        button {
+            font-size: 25px;
+            margin: 5%;
+            border-radius: 15px;
+        }
+
+        .top {
+        }
+
+        .mid-btns {
+            display: flex;
+            .moveR {
+                width: 49.5%;
+            }
+
+            .moveL {
+                width: 49.5%;
+            }
+        }
+
+        .bottom {
+        }
+
+        .btn {
+            &hover {
+                color: green;
+            }
+        }
+    } // End of player-control
+} // end of main-map
