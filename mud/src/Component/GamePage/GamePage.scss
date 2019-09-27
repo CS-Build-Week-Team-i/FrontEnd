@@ -1,7 +1,6 @@
+
 .main-map {
-
     .map-header {
-
     }
 
     .map-bottom {
@@ -29,36 +28,26 @@
             }
 
             .bottom-info {
-
-
                 .room-info {
-
                     h3 {
                         padding: 1%;
                         font-size: 30px;
                     }
-
+                    
                     p {
                         padding: 2%;
                         font-size: 23px;
                     }
-
                 } // end of room-info
 
                 .player-info {
                     text-align: left;
                     padding: 2%;
-
                 } // end of player info
-
-                
             } // end of bottom-info
-
         } // end of map-right
-
         // border: 1px solid yellow;
         // background-color: purple;
-        
     } // end of map-bottom
 
     .player-control {
@@ -71,34 +60,26 @@
         }
 
         .top {
-            
         }
 
         .mid-btns {
             display: flex;
-
             .moveR {
                 width: 49.5%;
-                
             }
 
             .moveL {
                 width: 49.5%;
-                
             }
         }
 
         .bottom {
-        
         }
 
         .btn {
-
             &hover {
                 color: green;
             }
         }
-
     } // End of player-control
-
 } // end of main-map
